@@ -1,0 +1,6 @@
+# Password Strength Analyzer – Requirements
+# All packages below are part of the Python standard library.
+# No third-party installation is required.
+
+# Standard library (no pip install needed):
+#   re, math, hashlib, secrets, string, os, getpass, sys, unittest
