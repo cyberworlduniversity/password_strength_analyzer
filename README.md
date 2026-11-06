@@ -196,3 +196,53 @@ A minimum of **60 bits** is recommended for strong passwords.
 ## 📜 License
 
 MIT License – free to use, modify, and distribute.
+
+
+## Repository Quick Start
+
+Clone the canonical repository:
+
+```bash
+git clone https://github.com/cyberworlduniversity/password_strength_analyzer.git
+cd password_strength_analyzer
+```
+
+### Requirements and installation
+
+- Install Python 3.10+ and pip.
+
+```bash
+No third-party packages are required by the documented project entry point.
+```
+
+### Build / run
+
+```bash
+password_analyzer.py
+```
+
+```bash
+python password_analyzer.py
+```
+
+### Validation
+
+```bash
+python -m compileall -q .
+```
+
+Do not reuse real account passwords in screenshots, examples, or shared logs.
+
+### Program flow
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Initialize application]
+    B --> C[Select interface or input]
+    C --> D{Ready to process?}
+    D -- No --> E[Report setup or input issue]
+    D -- Yes --> F[Run password strength analyzer operation]
+    F --> G[Summarize findings]
+    G --> H[Display results and exit]
+    E --> H
+```
