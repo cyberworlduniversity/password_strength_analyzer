@@ -1,5 +1,15 @@
 # 🔐 Password Strength Analyzer
 
+
+## Get this repository
+
+Clone the current project (this repository's canonical GitHub URL), then follow the installation and usage steps below.
+
+```bash
+git clone https://github.com/cyberworlduniversity/password_strength_analyzer.git
+cd password_strength_analyzer
+```
+
 A comprehensive Python tool to analyze password security — built with only the Python standard library.
 
 ---
