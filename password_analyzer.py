@@ -221,6 +221,8 @@ def hash_password(password: str) -> Dict[str, str]:
 #  Password generator / suggestion
 # ─────────────────────────────────────────────
 def generate_strong_password(length: int = 16) -> str:
+    if not isinstance(length, int) or not 8 <= length <= 128:
+        raise ValueError("Generated password length must be between 8 and 128 characters.")
     alphabet = string.ascii_letters + string.digits + "!@#$%^&*()_+-=[]{}|;:,.<>?"
     while True:
         pwd = "".join(secrets.choice(alphabet) for _ in range(length))
@@ -259,7 +261,7 @@ def analyze_password(password: str, show_hashes: bool = False) -> None:
     print("        🔐 PASSWORD STRENGTH ANALYZER")
     print("=" * 60)
 
-    masked = password[:2] + "*" * (len(password) - 4) + password[-2:] if len(password) > 4 else "****"
+    masked = "*" * len(password)
     print(f"\n  Password : {masked}  (length: {len(password)})")
 
     # Entropy
